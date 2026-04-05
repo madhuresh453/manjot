@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-04-04T12:02:10.337376",
+  "total_tests": 12,
+  "passed_tests": 12,
+  "success_rate": 100.0,
+  "results": [
+    {
+      "test": "API Health Check",
+      "success": true,
+      "details": "Status: 200, API responding with confidence: 81.0%",
+      "timestamp": "2026-04-04T12:02:09.938075"
+    },
+    {
+      "test": "Entropy Status",
+      "success": true,
+      "details": "Confidence: 71.0%, Entropy Bits: 142",
+      "timestamp": "2026-04-04T12:02:09.945975"
+    },
+    {
+      "test": "Trust Ledger",
+      "success": true,
+      "details": "Chain Length: 10 blocks",
+      "timestamp": "2026-04-04T12:02:09.948350"
+    },
+    {
+      "test": "Device Simulate - Trusted",
+      "success": true,
+      "details": "Trust Score: 88.6%, Access: GRANTED",
+      "timestamp": "2026-04-04T12:02:09.955663"
+    },
+    {
+      "test": "Device Simulate - Spoofed",
+      "success": true,
+      "details": "Trust Score: 8.6%, Access: DENIED, Indicators: 2",
+      "timestamp": "2026-04-04T12:02:09.958314"
+    },
+    {
+      "test": "Full Demo Simulation",
+      "success": true,
+      "details": "Steps: 4, Trusted: 1, Blocked: 1",
+      "timestamp": "2026-04-04T12:02:09.968472"
+    },
+    {
+      "test": "Login - admin@entropyx.io",
+      "success": true,
+      "details": "User: admin@entropyx.io, Trust Score: 60.9",
+      "timestamp": "2026-04-04T12:02:10.150329"
+    },
+    {
+      "test": "Auth Me",
+      "success": true,
+      "details": "Status: 200, User: admin@entropyx.io",
+      "timestamp": "2026-04-04T12:02:10.152109"
+    },
+    {
+      "test": "Trusted Devices",
+      "success": true,
+      "details": "Trusted Devices: 16",
+      "timestamp": "2026-04-04T12:02:10.154947"
+    },
+    {
+      "test": "Session History",
+      "success": true,
+      "details": "Session History: 15 sessions",
+      "timestamp": "2026-04-04T12:02:10.157622"
+    },
+    {
+      "test": "Logout",
+      "success": true,
+      "details": "Status: 200, Message: Logged out successfully",
+      "timestamp": "2026-04-04T12:02:10.158376"
+    },
+    {
+      "test": "Login - demo@entropyx.io",
+      "success": true,
+      "details": "User: demo@entropyx.io, Trust Score: 55.3",
+      "timestamp": "2026-04-04T12:02:10.337257"
+    }
+  ]
+}

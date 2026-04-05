@@ -1,0 +1,24 @@
+/* EntropyX-ID Custom Styles */
+
+.App {
+    min-height: 100vh;
+    background-color: #050505;
+}
+
+/* Custom scrollbar for the app */
+.App ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.App ::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.App ::-webkit-scrollbar-thumb {
+    background: #27272A;
+}
+
+.App ::-webkit-scrollbar-thumb:hover {
+    background: #00FF66;
+}

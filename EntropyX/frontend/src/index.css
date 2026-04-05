@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Unbounded:wght@300;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: 0 0% 2%;
+    --foreground: 220 9% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 220 9% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 220 9% 95%;
+    --primary: 145 100% 50%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 220 9% 95%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 145 100% 50%;
+    --accent-foreground: 0 0% 2%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 95%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 145 100% 50%;
+    --radius: 0rem;
+    --chart-1: 145 100% 50%;
+    --chart-2: 38 92% 50%;
+    --chart-3: 0 84% 60%;
+    --chart-4: 195 100% 50%;
+    --chart-5: 280 100% 60%;
+    
+    /* Custom EntropyX colors */
+    --matrix-green: #00FF66;
+    --cyber-amber: #F59E0B;
+    --threat-red: #FF3B30;
+    --neon-blue: #00BFFF;
+    --bg-default: #050505;
+    --bg-card: #121212;
+    --bg-raised: #1A1A1A;
+    --border-glow: rgba(0, 255, 102, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #050505;
+    color: #F3F4F6;
+}
+
+code, .mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+    font-family: 'Unbounded', sans-serif;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Glowing card effect */
+.glow-card {
+    border: 1px solid rgba(0, 255, 102, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.glow-card:hover {
+    border-color: rgba(0, 255, 102, 0.5);
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Threat card effect */
+.threat-card {
+    border: 1px solid rgba(255, 59, 48, 0.3);
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.1);
+}
+
+.threat-card:hover {
+    border-color: rgba(255, 59, 48, 0.5);
+    box-shadow: 0 0 25px rgba(255, 59, 48, 0.15);
+}
+
+/* Glassmorphism */
+.glass {
+    backdrop-filter: blur(24px);
+    background: rgba(5, 5, 5, 0.8);
+}
+
+/* Neon text effects */
+.neon-green {
+    color: #00FF66;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+}
+
+.neon-amber {
+    color: #F59E0B;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.neon-red {
+    color: #FF3B30;
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+}
+
+.neon-blue {
+    color: #00BFFF;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+/* Animated border */
+@keyframes border-pulse {
+    0%, 100% { border-color: rgba(0, 255, 102, 0.3); }
+    50% { border-color: rgba(0, 255, 102, 0.6); }
+}
+
+.border-pulse {
+    animation: border-pulse 2s ease-in-out infinite;
+}
+
+/* Hash stream animation */
+@keyframes hash-scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+.hash-stream {
+    animation: hash-scroll 20s linear infinite;
+}
+
+/* Entropy wave animation */
+@keyframes entropy-wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.5); }
+}
+
+.entropy-bar {
+    animation: entropy-wave 0.5s ease-in-out infinite;
+}
+
+/* Loading pulse */
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.pulse-glow {
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+/* Terminal cursor blink */
+@keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+    animation: cursor-blink 1s step-end infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272A;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00FF66;
+}
+
+/* Custom focus ring */
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 255, 102, 0.5);
+}
+
+/* Data table styles */
+.data-table {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+}
+
+.data-table th,
+.data-table td {
+    border-right: 1px solid #27272A;
+    border-bottom: 1px solid #27272A;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.data-table th {
+    background: #1A1A1A;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.65rem;
+}
+
+/* Status badges */
+.status-verified {
+    background: rgba(0, 255, 102, 0.1);
+    color: #00FF66;
+    border: 1px solid rgba(0, 255, 102, 0.3);
+}
+
+.status-suspicious {
+    background: rgba(255, 59, 48, 0.1);
+    color: #FF3B30;
+    border: 1px solid rgba(255, 59, 48, 0.3);
+}
+
+.status-pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}

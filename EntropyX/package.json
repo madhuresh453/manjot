@@ -1,0 +1,12 @@
+{
+  "name": "entropyx-root",
+  "private": true,
+  "scripts": {
+    "backend": "cd backend && python -m uvicorn server:app --host 127.0.0.1 --port 8000 --reload",
+    "frontend": "npm --prefix frontend start",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
