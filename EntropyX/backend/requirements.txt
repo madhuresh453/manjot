@@ -4,5 +4,6 @@ web3==6.15.1
 pydantic==2.7.1
 python-dotenv==1.0.1
 passlib==1.7.4
-python-multipart==0.0.9
 python-jose==3.3.0
+python-multipart==0.0.9
+starlette==0.37.2
